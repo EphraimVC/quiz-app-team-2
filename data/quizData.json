@@ -1,0 +1,204 @@
+{
+  "html": [
+    {
+      "question": "Vad står HTML för?",
+      "options": [
+        "A) Hyper Text Markup Language",
+        "B) High-Level Text Markup Language",
+        "C) Hyperlänk och Text Markup Language",
+        "D) Hyper Text Management Language"
+      ],
+      "answer": "A) Hyper Text Markup Language"
+    },
+    {
+      "question": "Vilken tagg används för att skapa en hyperlänk i HTML?",
+      "options": [
+        "A) <link>",
+        "B) <a>",
+        "C) <href>",
+        "D) <url>"
+      ],
+      "answer": "B) <a>"
+    },
+    {
+      "question": "Vad är den korrekta HTML-elementet för att infoga en radbrytning?",
+      "options": [
+        "A) <break>",
+        "B) <lb>",
+        "C) <br>",
+        "D) <line>"
+      ],
+      "answer": "C) <br>"
+    },
+    {
+      "question": "Vilken av följande är det korrekta sättet att lägga till en titel på en webbsida?",
+      "options": [
+        "A) <header>Min Titel</header>",
+        "B) <title>Min Titel</title>",
+        "C) <h1>Min Titel</h1>",
+        "D) <name>Min Titel</name>"
+      ],
+      "answer": "B) <title>Min Titel</title>"
+    },
+    {
+      "question": "Vad representerar <ul>-taggen?",
+      "options": [
+        "A) Oordnad lista",
+        "B) Ostrukturerad lista",
+        "C) Användarlista",
+        "D) Unik lista"
+      ],
+      "answer": "A) Oordnad lista"
+    },
+    {
+      "question": "Vilken HTML-tagg används för att definiera en bild?",
+      "options": [
+        "A) <image>",
+        "B) <img>",
+        "C) <picture>",
+        "D) <src>"
+      ],
+      "answer": "B) <img>"
+    },
+    {
+      "question": "Hur skapar du en kryssruta i HTML?",
+      "options": [
+        "A) <check>",
+        "B) <input type=\"checkbox\">",
+        "C) <box>",
+        "D) <checkbox>"
+      ],
+      "answer": "B) <input type=\"checkbox\">"
+    },
+    {
+      "question": "Vilken attribut används för att specificera destinationen för en länk?",
+      "options": [
+        "A) src",
+        "B) href",
+        "C) link",
+        "D) url"
+      ],
+      "answer": "B) href"
+    },
+    {
+      "question": "Vad är standard rubriknivån i HTML?",
+      "options": [
+        "A) <h1>",
+        "B) <h2>",
+        "C) <h3>",
+        "D) <h4>"
+      ],
+      "answer": "A) <h1>"
+    },
+    {
+      "question": "Vilken tagg används för att skapa en tabell i HTML?",
+      "options": [
+        "A) <tbl>",
+        "B) <table>",
+        "C) <tab>",
+        "D) <tbody>"
+      ],
+      "answer": "B) <table>"
+    },
+    {
+      "question": "Hur definierar du ett stycke i HTML?",
+      "options": [
+        "A) <p>",
+        "B) <para>",
+        "C) <text>",
+        "D) <paragraph>"
+      ],
+      "answer": "A) <p>"
+    },
+    {
+      "question": "Vad är syftet med <head>-elementet?",
+      "options": [
+        "A) Att innehålla dokumentets kropp",
+        "B) Att hålla meta-information om dokumentet",
+        "C) Att definiera huvudinhållet",
+        "D) Att skapa rubriker"
+      ],
+      "answer": "B) Att hålla meta-information om dokumentet"
+    },
+    {
+      "question": "Vilken tagg används för att göra text fet i HTML?",
+      "options": [
+        "A) <strong>",
+        "B) <bold>",
+        "C) <b>",
+        "D) Både A och C"
+      ],
+      "answer": "D) Både A och C"
+    },
+    {
+      "question": "Vad är den korrekta syntaxen för att lägga till en kommentar i HTML?",
+      "options": [
+        "A) // Detta är en kommentar",
+        "B) <!-- Detta är en kommentar -->",
+        "C) /* Detta är en kommentar */",
+        "D) # Detta är en kommentar"
+      ],
+      "answer": "B) <!-- Detta är en kommentar -->"
+    },
+    {
+      "question": "Vilken HTML-element används för den största rubriken?",
+      "options": [
+        "A) <h1>",
+        "B) <h2>",
+        "C) <h3>",
+        "D) <h4>"
+      ],
+      "answer": "A) <h1>"
+    },
+    {
+      "question": "Hur kan du göra en numrerad lista i HTML?",
+      "options": [
+        "A) <list>",
+        "B) <ol>",
+        "C) <ul>",
+        "D) <num>"
+      ],
+      "answer": "B) <ol>"
+    },
+    {
+      "question": "Vilken attribut är nödvändig för <img>-taggen?",
+      "options": [
+        "A) alt",
+        "B) title",
+        "C) src",
+        "D) href"
+      ],
+      "answer": "C) src"
+    },
+    {
+      "question": "Vad definierar <footer>-taggen?",
+      "options": [
+        "A) Huvudinnehållet på sidan",
+        "B) Navigeringslänkarna",
+        "C) Den nedersta sektionen av ett dokument",
+        "D) Den övre sektionen av ett dokument"
+      ],
+      "answer": "C) Den nedersta sektionen av ett dokument"
+    },
+    {
+      "question": "Vilken tagg används för att definiera en sektion i ett dokument?",
+      "options": [
+        "A) <section>",
+        "B) <div>",
+        "C) <area>",
+        "D) <group>"
+      ],
+      "answer": "A) <section>"
+    },
+    {
+      "question": "Hur specificerar du en teckenkodning för ett HTML-dokument?",
+      "options": [
+        "A) <meta charset=\"UTF-8\">",
+        "B) <encoding=\"UTF-8\">",
+        "C) <meta type=\"text/html\">",
+        "D) <char=\"UTF-8\">"
+      ],
+      "answer": "A) <meta charset=\"UTF-8\">"
+    }
+  ]
+}
