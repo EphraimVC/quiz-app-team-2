@@ -1,3 +1,33 @@
 @import "./categories.css";
 @import "./questions.css";
 @import "./result.css";
+
+:root{
+    --subText-:#B9B9B9;
+    --overall-:black;
+}
+
+
+body{
+    font-family: "Passion One";
+    h1, p {
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+
+.indexWrapper, footer{
+    display: flex;
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    .indexHeading{
+        .quizIcon{
+            width: 5rem;
+            box-shadow: 5px 0 5px 5px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
