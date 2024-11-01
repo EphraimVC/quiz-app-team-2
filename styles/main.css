@@ -5,6 +5,8 @@
 :root{
     --subText-:#B9B9B9;
     --overall-:black;
+    --input-:#f5f4f4;
+
 }
 
 
@@ -16,18 +18,95 @@ body{
     }
     
 }
+main{
+    height: 70vh;
+}
 
-.indexWrapper, footer{
+.indexWrapper{
     display: flex;
     width: 100vw;
+    height: 70vh;
     text-align: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 7rem;
 }
 
+.label{
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
 .indexHeading{
+    margin-bottom:4rem ;
+    .heading1{
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    .subHeading{
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--subText-);
+    }
     .quizIcon{
         width: 5rem;
     }
+}
+
+.inputContainer{
+display: flex;
+flex-direction: column;
+}
+.inputHolder{
+    display: flex;
+    background-color: var(--input-);
+    padding: 8px;
+
+   input{
+    border: none;
+    background-color: var(--input-);
+    color: var(--subText-);
+    font-size: 0.9rem;
+    font-weight: 700;
+   }
+
     
+    .btnWrapper{
+        position: relative;
+        display: inline-block
+    }
+    .btnText{
+        position: absolute;
+        color: white; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        font-weight: 400;
+        
+    }
+    
+    .btnBackground{
+        width: 7rem;
+        height: auto;
+        display: block;
+    }
+}
+.settingsContainer{
+    margin-top: 7rem;
+    .text1{
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--overall-);
+        margin-block: 0.5rem;
+    }
+}
+
+footer{
+    text-align: center;
+    color: var(--subText-);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
