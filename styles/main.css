@@ -23,11 +23,11 @@ body{
     text-align: center;
     align-items: center;
     flex-direction: column;
+}
 
-    .indexHeading{
-        .quizIcon{
-            width: 5rem;
-            box-shadow: 5px 0 5px 5px rgba(0, 0, 0, 0.1);
-        }
+.indexHeading{
+    .quizIcon{
+        width: 5rem;
     }
+    
 }
