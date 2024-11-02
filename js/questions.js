@@ -16,6 +16,7 @@ await fetch('../data/quizData.json')
         return response.json();
     })
     .then(data => {
+        //data.html will be data.CATEGORY later
         questions = data.html
     })
 
