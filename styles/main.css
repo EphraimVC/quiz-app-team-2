@@ -6,7 +6,6 @@
     --subText-:#B9B9B9;
     --overall-:white;
     --input-:#f5f4f4;
-
 }
 
 
@@ -61,6 +60,7 @@ main{
         font-size: 1.4rem;
         font-weight: 400;
         color: var(--subText-);
+        
     }
     .quizIcon{
         width: 5rem;
@@ -88,7 +88,8 @@ flex-direction: column;
     
     .btnWrapper{
         position: relative;
-        display: inline-block
+        display: inline-block;
+        cursor: pointer;
     }
     .btnText{
         position: absolute;
