@@ -41,23 +41,23 @@ main{
     text-align: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 7rem;
+    margin-top: 3rem;
 }
 
 .label{
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 .indexHeading{
     margin-bottom:4rem ;
     .heading1{
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 700;
         color: var(--overall-);
     }
     .subHeading{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
         color: var(--subText-);
         
@@ -70,11 +70,13 @@ main{
 .inputContainer{
 display: flex;
 flex-direction: column;
+
 }
 .inputHolder{
     display: flex;
     background-color: var(--input-);
     padding: 8px;
+    max-width: 50rem;
 
    input{
     border: none;
@@ -83,6 +85,7 @@ flex-direction: column;
     color:#440496;
     font-size: 0.9rem;
     font-weight: 700;
+    width: 11.5rem;
    }
 
     
@@ -97,13 +100,13 @@ flex-direction: column;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 400;
         
     }
     
     .btnBackground{
-        width: 7rem;
+        width: 6rem;
         height: auto;
         display: block;
     }
@@ -111,7 +114,7 @@ flex-direction: column;
 .settingsContainer{
     margin-top: 7rem;
     .text1{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 400;
         color: var(--overall-);
         margin-block: 0.5rem;
@@ -127,3 +130,4 @@ footer{
     transform: translateX(-50%);
    
 }
+
