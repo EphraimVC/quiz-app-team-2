@@ -4,15 +4,28 @@
 
 :root{
     --subText-:#B9B9B9;
-    --overall-:black;
+    --overall-:white;
     --input-:#f5f4f4;
 
 }
 
 
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1000;
+}
+
 body{
     font-family: "Passion One";
-    h1, p {
+    display: flex;
+    flex-direction: column;
+    background-color: #050922;
+
+    h2, p {
         margin: 0;
         padding: 0;
     }
@@ -42,9 +55,10 @@ main{
     .heading1{
         font-size: 4rem;
         font-weight: 700;
+        color: var(--overall-);
     }
     .subHeading{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 400;
         color: var(--subText-);
     }
@@ -64,8 +78,9 @@ flex-direction: column;
 
    input{
     border: none;
+    outline: none;
     background-color: var(--input-);
-    color: var(--subText-);
+    color:#440496;
     font-size: 0.9rem;
     font-weight: 700;
    }
@@ -109,4 +124,5 @@ footer{
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+   
 }
