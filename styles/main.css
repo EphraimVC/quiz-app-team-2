@@ -116,7 +116,9 @@ margin-top: 3rem;
         transform: translate(-50%, -50%);
         font-size: clamp(1.2rem, 2vw, 1.6rem);
         font-weight: 400;
-        
+    }
+    .btnText:hover{
+        color: #FFE100;
     }
     
     .btnBackground{
@@ -126,6 +128,7 @@ margin-top: 3rem;
         height: auto;
         display: block;
     }
+   
 }
 .settingsContainer{
     padding-top: 8rem;
@@ -134,6 +137,10 @@ margin-top: 3rem;
         font-weight: 400;
         color: var(--overall-);
         margin-block: 0.5rem;
+        cursor: pointer;
+    }
+    .text1:hover{
+        color:#FFE100 ;
     }
 }
 
@@ -147,3 +154,24 @@ footer{
    
 }
 
+.rulesPopUp{
+    z-index: 100;
+    position: absolute;
+    background-color: #440496;
+    color: var(--overall-);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    font-weight: lighter;
+    left: 25%;
+    top:25%;
+    transition: ease-in 0.5s;
+}
+.hidePopUp{
+    display: none;
+}
+
+.mainBlur{
+    filter: blur(10px);
+    z-index: -100;
+}
