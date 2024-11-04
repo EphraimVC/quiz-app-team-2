@@ -23,6 +23,8 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #050922;
+    margin: 0;
+    padding: 0;
 
     h2, p {
         margin: 0;
@@ -31,7 +33,12 @@ body{
     
 }
 main{
-    height: 70vh;
+    height: 100vh;
+}
+
+/* font margin reset */
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
 }
 
 .indexWrapper{
