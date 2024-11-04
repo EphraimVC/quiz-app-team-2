@@ -41,25 +41,30 @@ main{
     text-align: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 12rem;
 }
 
 .label{
     text-align: left;
     font-size: 1.2rem;
     margin-bottom: 10px;
+    color: var(--overall-);
 }
 .indexHeading{
     margin-bottom:4rem ;
     .heading1{
-        font-size: 3.5rem;
+        /* font-size: 3.5rem; */
+        font-size: clamp(3.5rem, 5vw + 1rem, 6rem);
         font-weight: 700;
         color: var(--overall-);
+    
     }
     .subHeading{
-        font-size: 1.2rem;
+        /* font-size: 1.2rem; */
+        font-size: clamp(1.2rem, 2vw , 2rem);
         font-weight: 400;
         color: var(--subText-);
+        
         
     }
     .quizIcon{
@@ -70,13 +75,14 @@ main{
 .inputContainer{
 display: flex;
 flex-direction: column;
-
+margin-top: 3rem;
 }
 .inputHolder{
     display: flex;
     background-color: var(--input-);
     padding: 8px;
-    max-width: 50rem;
+    width:clamp(18rem, 50vw, 20rem);
+
 
    input{
     border: none;
@@ -85,7 +91,7 @@ flex-direction: column;
     color:#440496;
     font-size: 0.9rem;
     font-weight: 700;
-    width: 11.5rem;
+    width: 20rem;
    }
 
     
@@ -93,6 +99,7 @@ flex-direction: column;
         position: relative;
         display: inline-block;
         cursor: pointer;
+        right: 5px;
     }
     .btnText{
         position: absolute;
@@ -100,21 +107,23 @@ flex-direction: column;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 1.2rem;
+        font-size: clamp(1.2rem, 2vw, 1.6rem);
         font-weight: 400;
         
     }
     
     .btnBackground{
-        width: 6rem;
+        min-width: 5rem;
+        width: 6.5rem;
+        max-width: 7rem;
         height: auto;
         display: block;
     }
 }
 .settingsContainer{
-    margin-top: 7rem;
+    padding-top: 8rem;
     .text1{
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 2vw, 2rem);
         font-weight: 400;
         color: var(--overall-);
         margin-block: 0.5rem;
