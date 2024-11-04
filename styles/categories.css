@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: 100vw;
     
     
 }
@@ -13,17 +14,19 @@ body {
     align-items: center;
     justify-content: center;
     height: calc(100% - 95px);
+    padding: 0px 20px;
+    
 }
 .header {
     margin-bottom: 100px;
 }
 .header h1 {
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 1000;
     margin: 0;
 }
 .header p {
-    font-size: 1em;
+    font-size: 1rem;
     color: #888;
     margin: 0;
     font-weight:1000;
@@ -31,6 +34,9 @@ body {
 .categories {
     display: flex;
     gap: 20px;
+    width: 100%;
+    justify-content: center;
+    
 }
 .category {
     width: 200px;
@@ -39,7 +45,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 1000;
     color: #000;
     border-radius: 10px;
@@ -77,27 +83,46 @@ footer{
     color: #888;
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
+    .header h1 {
+        font-size: 2rem;
+        font-weight: 1000;
+        margin: 0;
+    }
+    .header p {
+        font-size: 0.9rem;
+        color: #888;
+        margin: 0;
+        font-weight:1000;
+    }
+    .category{
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:375px){
     .categories{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     .category{
-        width: 150px;
-        height: 150px;
+        font-size: 1rem;
+        flex: 1;
     }
     .header {
         margin-bottom: 50px;
         margin-top: 70px;
     }
     .header h1 {
-        font-size: 2em;
+        font-size: 1.5rem;
         font-weight: 1000;
         margin: 0;
     }
     .header p {
-        font-size: 1em;
+        font-size: 0.8rem;
         color: #888;
         margin: 0;
         font-weight:1000;
