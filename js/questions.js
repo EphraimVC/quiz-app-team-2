@@ -9,14 +9,13 @@ let answerContainer = document.getElementById('answer-container')
 let timeElement = document.getElementById('time')
 
 //fetch quiz and put response in questions variable
-await fetch('../data/quizData.json')
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        //data.html will be data.CATEGORY later
-        questions = data.html
-    })
+async function fetchQuizData() {
+    const response = await fetch('../data/quizData.json')
+    const data = await response.json();
+    
+    //populate questions variable with data
+    questions = data.html;
+}
 
 
 function answerQuestion(answer) {
@@ -63,7 +62,7 @@ var timerInterval = undefined;
 
 function questionTimer() {
     //set variables in seconds
-    time = 60;
+    let time = 60;
 
     //create a interval that decrements time every 1000ms
     timerInterval = setInterval(() => {
@@ -90,9 +89,10 @@ function stopTimer() {
     clearInterval(timerInterval)
 }
 
+async function renderFunction() {
+    //wait for fetchQuizData to populate the questions variable before running
+    await fetchQuizData();
 
-
-function renderFunction() {
     //clear answerContainer from content
     answerContainer.innerHTML = ''
     
@@ -103,7 +103,7 @@ function renderFunction() {
         const p = document.createElement('p')
 
         p.textContent = questions[currentQuestion].options[i]
-       
+    
         p.addEventListener('click', function(e) {
             answerQuestion(questions[currentQuestion].options[i]);
         })
