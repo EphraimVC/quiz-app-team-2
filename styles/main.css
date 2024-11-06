@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap'); */
 @import "./categories.css";
 @import "./questions.css";
 @import "./result.css";
@@ -41,10 +42,24 @@ h1,h2,h3,h4,h5,h6,p {
     margin: 0;
 }
 
+.speaker{
+    position: absolute;
+    right: 10px;
+    z-index: 1000;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #FFE100;
+    width: 3.5rem;
+    height: 3.5rem;
+    clip-path: polygon(3% 0, 100% 0, 100% 95%, 7% 100%, 0% 38%);
+    
+
+}
+
 .indexWrapper{
     display: flex;
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
     text-align: center;
     align-items: center;
     flex-direction: column;
@@ -124,18 +139,25 @@ margin-top: 3rem;
         display: block;
     }
    
+  
 }
 .settingsContainer{
-    padding-top: 8rem;
-    .text1{
+    .highScore{
+        font-size: clamp(1.3rem, 1.7vw, 2rem);
+        font-weight: 400;
+        color: var(--overall-);
+        margin-top: 2rem;
+    }
+    .rules:hover{
+        color:#FFE100 ;
+    }
+    .rules{
+        margin-top: 50px;
+        cursor: pointer;
         font-size: clamp(1.5rem, 2vw, 2rem);
         font-weight: 400;
         color: var(--overall-);
-        margin-block: 0.5rem;
-        cursor: pointer;
-    }
-    .text1:hover{
-        color:#FFE100 ;
+        text-decoration: underline;
     }
 }
 
@@ -160,9 +182,9 @@ footer{
     color: var(--overall-);
     padding: 20px;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
     font-weight: lighter;
-    font-family: "ABeeZee";
+    font-family: "Archivo";
     left: 50%;
     top:50%;
     transform: translate(-50%, -50%);
