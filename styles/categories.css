@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 95px);
+    padding: 0px 20px;
+    
+}
+.header {
+    margin-bottom: 100px;
+}
+.header h1 {
+    font-size: 3rem;
+    font-weight: 1000;
+    margin: 0;
+}
+.header p {
+    font-size: 1rem;
+    color: #888;
+    margin: 0;
+    font-weight:1000;
+}
+.categories {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    
+}
+.category {
+    width: 200px;
+    height: 200px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.category:hover {
+    transform: scale(1.1);
+}
+
+.logo-sound{
+    display: flex;
+    justify-content:space-between;
+    padding: 10px 20px;
+    
+    
+}
+.logo {
+    display: flex;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+.sound-icon {
+    display: flex;
+}
+.sound-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+footer{
+    font-weight: 600;
+    color: #888;
+}
+
+@media(max-width:768px){
+    .header h1 {
+        font-size: 2rem;
+        font-weight: 1000;
+        margin: 0;
+    }
+    .header p {
+        font-size: 0.9rem;
+        color: #888;
+        margin: 0;
+        font-weight:1000;
+    }
+    .category{
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:375px){
+    .categories{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .category{
+        font-size: 1rem;
+        flex: 1;
+    }
+    .header {
+        margin-bottom: 50px;
+        margin-top: 70px;
+    }
+    .header h1 {
+        font-size: 1.5rem;
+        font-weight: 1000;
+        margin: 0;
+    }
+    .header p {
+        font-size: 0.8rem;
+        color: #888;
+        margin: 0;
+        font-weight:1000;
+    }
+}
