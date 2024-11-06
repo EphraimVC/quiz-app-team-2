@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap');
 @import "./categories.css";
 @import "./questions.css";
 @import "./result.css";
@@ -7,7 +8,6 @@
     --overall-:white;
     --input-:#f5f4f4;
 }
-
 
 svg {
     position: fixed;
@@ -64,15 +64,12 @@ h1,h2,h3,h4,h5,h6,p {
         font-size: clamp(3.5rem, 5vw + 1rem, 6rem);
         font-weight: 700;
         color: var(--overall-);
-    
     }
     .subHeading{
         /* font-size: 1.2rem; */
         font-size: clamp(1.2rem, 2vw , 2rem);
         font-weight: 400;
         color: var(--subText-);
-        
-        
     }
     .quizIcon{
         width: 5rem;
@@ -90,7 +87,6 @@ margin-top: 3rem;
     padding: 8px;
     width:clamp(18rem, 50vw, 20rem);
 
-
    input{
     border: none;
     outline: none;
@@ -100,7 +96,6 @@ margin-top: 3rem;
     font-weight: 700;
     width: 20rem;
    }
-
     
     .btnWrapper{
         position: relative;
@@ -153,25 +148,48 @@ footer{
     transform: translateX(-50%);
    
 }
-
+/* pop up window  */
 .rulesPopUp{
+    display: none;
+    max-width: 35rem;
+    min-width: 15rem;
+    width: 60vw;
     z-index: 100;
     position: absolute;
     background-color: #440496;
     color: var(--overall-);
     padding: 20px;
     border-radius: 10px;
-    font-size: 1.7rem;
+    font-size: 1rem;
     font-weight: lighter;
-    left: 25%;
-    top:25%;
-    transition: ease-in 0.5s;
+    font-family: "ABeeZee";
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+   
+    h2{
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 15px;
+    }
 }
-.hidePopUp{
-    display: none;
+/* show the popup by adding this clas to the current existing class in the popup element  */
+.rulesPopUp.showPopUp{
+    display: block;
 }
-
+/* blures the backgroud  */
 .mainBlur{
     filter: blur(10px);
     z-index: -100;
+}
+
+.closePopUp{
+    background-color: #FFE100;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: black;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
 }
