@@ -100,5 +100,209 @@
       ],
       "answer": "B) <table>"
     }
+  ],
+  "css": [
+    {
+      "question": "Vilken CSS-egenskap används för att ändra bakgrundsfärgen på en webbsida?",
+      "options": [
+        "A) background-color",
+        "B) color",
+        "C) background-image",
+        "D) bg-color"
+      ],
+      "answer": "A) background-color"
+    },
+    {
+      "question": "Vad gör CSS-egenskapen 'font-size'?",
+      "options": [
+        "A) Ändrar typsnittet",
+        "B) Ändrar textstorleken",
+        "C) Ändrar textens färg",
+        "D) Ändrar avståndet mellan rader"
+      ],
+      "answer": "B) Ändrar textstorleken"
+    },
+    {
+      "question": "Vilken CSS-egenskap används för att justera textens horisontella position?",
+      "options": [
+        "A) text-align",
+        "B) text-justify",
+        "C) vertical-align",
+        "D) text-position"
+      ],
+      "answer": "A) text-align"
+    },
+    {
+      "question": "Vad gör CSS-egenskapen 'border-radius'?",
+      "options": [
+        "A) Lägger till en kantlinje runt elementet",
+        "B) Ändrar hörnens radie",
+        "C) Skapar en skugga bakom elementet",
+        "D) Justerar avståndet mellan elementen"
+      ],
+      "answer": "B) Ändrar hörnens radie"
+    },
+    {
+      "question": "Vilken enhet används för att definiera avstånd i CSS?",
+      "options": [
+        "A) px",
+        "B) dp",
+        "C) em",
+        "D) pt"
+      ],
+      "answer": "A) px"
+    },
+    {
+      "question": "Hur kan du göra text fet i CSS?",
+      "options": [
+        "A) font-weight: bold;",
+        "B) font-style: bold;",
+        "C) font-size: bold;",
+        "D) text-weight: bold;"
+      ],
+      "answer": "A) font-weight: bold;"
+    },
+    {
+      "question": "Vilken CSS-egenskap används för att lägga till skugga på text?",
+      "options": [
+        "A) text-shadow",
+        "B) box-shadow",
+        "C) shadow-text",
+        "D) font-shadow"
+      ],
+      "answer": "A) text-shadow"
+    },
+    {
+      "question": "Vad gör CSS-egenskapen 'display' med ett element?",
+      "options": [
+        "A) Ställer in om elementet ska vara synligt eller inte",
+        "B) Anger hur ett element ska visas på sidan",
+        "C) Justerar elementets placering",
+        "D) Lägger till en bakgrundsbild"
+      ],
+      "answer": "B) Anger hur ett element ska visas på sidan"
+    },
+    {
+      "question": "Vilken CSS-egenskap används för att lägga till avstånd mellan element?",
+      "options": [
+        "A) margin",
+        "B) padding",
+        "C) spacing",
+        "D) distance"
+      ],
+      "answer": "A) margin"
+    },
+    {
+      "question": "Hur kan du centrera ett element horisontellt i CSS?",
+      "options": [
+        "A) text-align: center;",
+        "B) margin: auto;",
+        "C) align-items: center;",
+        "D) center-align: true;"
+      ],
+      "answer": "B) margin: auto;"
+    }
+  ],
+  "javascript": [
+    {
+      "question": "Vad används för att deklarera en variabel i JavaScript?",
+      "options": [
+        "A) var",
+        "B) let",
+        "C) const",
+        "D) Alla ovanstående"
+      ],
+      "answer": "D) Alla ovanstående"
+    },
+    {
+      "question": "Vilken metod används för att skriva ut text i konsolen i JavaScript?",
+      "options": [
+        "A) print()",
+        "B) log()",
+        "C) console.print()",
+        "D) console.log()"
+      ],
+      "answer": "D) console.log()"
+    },
+    {
+      "question": "Vad returneras av följande kod: 'typeof 42'?",
+      "options": [
+        "A) number",
+        "B) string",
+        "C) boolean",
+        "D) object"
+      ],
+      "answer": "A) number"
+    },
+    {
+      "question": "Vilket av följande är ett sätt att skapa en funktion i JavaScript?",
+      "options": [
+        "A) function myFunction() {}",
+        "B) def myFunction() {}",
+        "C) create function myFunction() {}",
+        "D) function: myFunction() {}"
+      ],
+      "answer": "A) function myFunction() {}"
+    },
+    {
+      "question": "Vad returneras av följande kod: 'Boolean(0)'?",
+      "options": [
+        "A) true",
+        "B) false",
+        "C) undefined",
+        "D) null"
+      ],
+      "answer": "B) false"
+    },
+    {
+      "question": "Vad gör följande kod: 'let x = [1, 2, 3].map(n => n * 2);'?",
+      "options": [
+        "A) Skapar en ny array där varje element är multiplicerat med 2",
+        "B) Filtrerar arrayen och tar bort alla element större än 2",
+        "C) Adderar 2 till varje element i arrayen",
+        "D) Skapar en ny array med värden från 1 till 2"
+      ],
+      "answer": "A) Skapar en ny array där varje element är multiplicerat med 2"
+    },
+    {
+      "question": "Vilken metod används för att lägga till ett element i slutet av en array i JavaScript?",
+      "options": [
+        "A) push()",
+        "B) pop()",
+        "C) unshift()",
+        "D) shift()"
+      ],
+      "answer": "A) push()"
+    },
+    {
+      "question": "Vad gör följande kod: 'if (x == 5)'?",
+      "options": [
+        "A) Jämför om x är lika med 5 och returnerar true eller false",
+        "B) Kontrollerar om x är definierat",
+        "C) Kollar om x är ett objekt",
+        "D) Jämför om x är strikt lika med 5"
+      ],
+      "answer": "A) Jämför om x är lika med 5 och returnerar true eller false"
+    },
+    {
+      "question": "Vad gör '=== operatorn' i JavaScript?",
+      "options": [
+        "A) Jämför både värde och typ av två variabler",
+        "B) Jämför endast värde av två variabler",
+        "C) Skapar ett nytt objekt",
+        "D) Talar om ifall två variabler är lika"
+      ],
+      "answer": "A) Jämför både värde och typ av två variabler"
+    },
+    {
+      "question": "Vilket resultat ger '2 + '2' i JavaScript?",
+      "options": [
+        "A) 4",
+        "B) 22",
+        "C) 2",
+        "D) NaN"
+      ],
+      "answer": "B) 22"
+    }
   ]
 }
