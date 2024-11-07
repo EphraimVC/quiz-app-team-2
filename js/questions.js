@@ -18,9 +18,9 @@ let soundWrong = document.getElementById('soundWrong')
 async function fetchQuizData() {
     const response = await fetch('../data/quizData.json')
     const data = await response.json();
-    
+    let category = localStorage.getItem('Kategori')
     //populate questions variable with data
-    questions = data.html;
+    questions = data[category];
 }
 
 

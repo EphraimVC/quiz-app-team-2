@@ -203,7 +203,7 @@
       "answer": "B) margin: auto;"
     }
   ],
-  "javascript": [
+  "js": [
     {
       "question": "Vad används för att deklarera en variabel i JavaScript?",
       "options": [
