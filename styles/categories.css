@@ -24,12 +24,14 @@ body {
     font-size: 3rem;
     font-weight: 1000;
     margin: 0;
+    color: white;
 }
 .header p {
     font-size: 1rem;
-    color: #888;
+    color: white;
     margin: 0;
     font-weight:1000;
+    opacity: 0.5;
 }
 .categories {
     display: flex;
@@ -39,9 +41,10 @@ body {
     
 }
 .category {
-    width: 200px;
-    height: 200px;
-    background-color: #e0e0e0;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.25);
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,6 +54,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s;
+     
 }
 .category:hover {
     transform: scale(1.1);
@@ -59,9 +63,7 @@ body {
 .logo-sound{
     display: flex;
     justify-content:space-between;
-    padding: 10px 20px;
-    
-    
+    padding: 10px 20px; 
 }
 .logo {
     display: flex;
@@ -72,59 +74,16 @@ body {
 }
 .sound-icon {
     display: flex;
+    clip-path: polygon(3% 0, 100% 0, 100% 95%, 7% 100%, 0% 38%);
 }
 .sound-icon img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    padding: 8px;
 }
 
 footer{
     font-weight: 600;
     color: #888;
-}
-
-@media(max-width:768px){
-    .header h1 {
-        font-size: 2rem;
-        font-weight: 1000;
-        margin: 0;
-    }
-    .header p {
-        font-size: 0.9rem;
-        color: #888;
-        margin: 0;
-        font-weight:1000;
-    }
-    .category{
-        font-size: 1.2rem;
-    }
-}
-
-@media(max-width:375px){
-    .categories{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .category{
-        font-size: 1rem;
-        flex: 1;
-    }
-    .header {
-        margin-bottom: 50px;
-        margin-top: 70px;
-    }
-    .header h1 {
-        font-size: 1.5rem;
-        font-weight: 1000;
-        margin: 0;
-    }
-    .header p {
-        font-size: 0.8rem;
-        color: #888;
-        margin: 0;
-        font-weight:1000;
-    }
 }
