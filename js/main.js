@@ -14,8 +14,9 @@ showHiScore.innerText = lsHiScore
 inputBtn.addEventListener("click", () => { 
     localStorage.setItem("name", input.value);
     console.log(input.value);
-    input.value = ""
-    
+    input.value= ""
+    window.location.href = '/pages/categories.html'
+
 })
 
 // ------------------popup-------------------------------- 
@@ -26,5 +27,3 @@ const togglePopUp = () => {
 
 ruleBtn.addEventListener("click", togglePopUp)
 closePop.addEventListener("click", togglePopUp)
-
-
