@@ -6,13 +6,17 @@ let main = document.querySelector(".main")
 let rulesWindow = document.querySelector("#popContainer")
 let closePop = document.querySelector(".closePopUp")
 let soundBtn = document.querySelector(".speaker")
+let lsHiScore = localStorage.getItem("highestScore")
+let showHiScore = document.querySelector(".hiScore");
 
+showHiScore.innerText = lsHiScore
 // -------------------- localstorage-----------------------
 inputBtn.addEventListener("click", () => { 
     localStorage.setItem("name", input.value);
     console.log(input.value);
     input.value= ""
     window.location.href = '/pages/categories.html'
+
 })
 
 // ------------------popup-------------------------------- 
