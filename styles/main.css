@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap'); */
 @import "./categories.css";
 @import "./questions.css";
 @import "./result.css";
@@ -7,7 +9,6 @@
     --overall-:white;
     --input-:#f5f4f4;
 }
-
 
 svg {
     position: fixed;
@@ -41,10 +42,24 @@ h1,h2,h3,h4,h5,h6,p {
     margin: 0;
 }
 
+.speaker{
+    position: absolute;
+    right: 10px;
+    z-index: 1000;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #FFE100;
+    width: 3.5rem;
+    height: 3.5rem;
+    clip-path: polygon(3% 0, 100% 0, 100% 95%, 7% 100%, 0% 38%);
+    
+
+}
+
 .indexWrapper{
     display: flex;
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
     text-align: center;
     align-items: center;
     flex-direction: column;
@@ -64,15 +79,12 @@ h1,h2,h3,h4,h5,h6,p {
         font-size: clamp(3.5rem, 5vw + 1rem, 6rem);
         font-weight: 700;
         color: var(--overall-);
-    
     }
     .subHeading{
         /* font-size: 1.2rem; */
         font-size: clamp(1.2rem, 2vw , 2rem);
         font-weight: 400;
         color: var(--subText-);
-        
-        
     }
     .quizIcon{
         width: 5rem;
@@ -90,7 +102,6 @@ margin-top: 3rem;
     padding: 8px;
     width:clamp(18rem, 50vw, 20rem);
 
-
    input{
     border: none;
     outline: none;
@@ -100,7 +111,6 @@ margin-top: 3rem;
     font-weight: 700;
     width: 20rem;
    }
-
     
     .btnWrapper{
         position: relative;
@@ -116,7 +126,9 @@ margin-top: 3rem;
         transform: translate(-50%, -50%);
         font-size: clamp(1.2rem, 2vw, 1.6rem);
         font-weight: 400;
-        
+    }
+    .btnText:hover{
+        color: #FFE100;
     }
     
     .btnBackground{
@@ -126,14 +138,26 @@ margin-top: 3rem;
         height: auto;
         display: block;
     }
+   
+  
 }
 .settingsContainer{
-    padding-top: 8rem;
-    .text1{
+    .highScore{
+        font-size: clamp(1.3rem, 1.7vw, 2rem);
+        font-weight: 400;
+        color: var(--overall-);
+        margin-top: 2rem;
+    }
+    .rules:hover{
+        color:#FFE100 ;
+    }
+    .rules{
+        margin-top: 50px;
+        cursor: pointer;
         font-size: clamp(1.5rem, 2vw, 2rem);
         font-weight: 400;
         color: var(--overall-);
-        margin-block: 0.5rem;
+        text-decoration: underline;
     }
 }
 
@@ -146,4 +170,62 @@ footer{
     transform: translateX(-50%);
    
 }
+/* pop up window  */
+.rulesPopUp{
+    display: none;
+    max-width: 35rem;
+    min-width: 15rem;
+    width: 60vw;
+    z-index: 100;
+    position: absolute;
+    background-color: #440496;
+    color: var(--overall-);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    font-weight: lighter;
+    font-family: "Archivo";
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: top 0.3s ease, opacity 0.3s ease, display 0.3s ease allow-discrete;
+   
+    h2{
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 15px;
+    }
 
+    
+}
+/* show the popup by adding this clas to the current existing class in the popup element  */
+.rulesPopUp.showPopUp{
+    display: block;
+    opacity: 1;
+    top: 50%;
+    
+}
+
+@starting-style {
+.rulesPopUp.showPopUp {
+    opacity: 0;
+    top: 60%;
+    }
+}
+/* blures the backgroud  */
+.mainBlur{
+    filter: blur(10px);
+    z-index: -100;
+}
+
+.closePopUp{
+    background-color: #FFE100;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: black;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+}
