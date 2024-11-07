@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+.main-questions {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+
+    .questions-wrapper {
+        display: flex;
+        width: 1000px;
+        height: fit-content;
+        flex-direction: column;
+        gap: 32px;
+
+        .questions-header {
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .score-container, .time-container {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                gap: 8px;
+
+                .score, .time {
+                    background: var(--yellow-accent);
+                    padding: 0 16px;
+                    display: grid;
+                    place-items: center;
+                    font-size: 36px;
+                    color: black;
+                }
+
+                .score {
+                    clip-path: polygon(0 0, 100% 1%, 98% 100%, 0 100%);
+                }
+
+                .time {
+                    clip-path: polygon(2% 2%, 98% 4%, 99% 100%, 0 100%);
+                }
+            }
+            
+            .question-index-container {
+                font-size: 28px;
+                position: relative;
+                top: 18px;
+            }
+            
+            .time-container {
+                text-align: right;
+            }
+        }
+
+        .question-container {
+            height: 330px;
+            display: grid;
+            place-items: center;
+            background-color: rgba(255, 255, 255, 0.25);
+            clip-path: polygon(0 0, 99% 2%, 100% 100%, 100% 100%, 2% 99%);
+
+            h1 {
+                font-size: 56px;
+                background: #6A48FF;
+                height: 75%;
+                display: grid;
+                place-items: center;
+                width: 90%;
+            }
+        }
+
+        .answer-container {
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.25);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            padding: 32px;
+            gap: 16px;
+            clip-path: polygon(1% 1%, 100% 1%, 99% 98%, 0 100%);
+
+
+            .answer {
+                background-color: #75b5ff;
+                display: grid;
+                place-items: center;
+                font-size: 26px;
+                cursor: pointer;
+                color: white;
+                transition: background-color 0.1s ease;
+
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+
+                &.correct-answer {
+                    background-color: green;
+                }
+
+                &.correct-answer-blinking {
+                    /* transition-delay: 0.5s; */
+                    background-color: green;
+                    animation: greenBlinkingBg 0.5s ease infinite;
+                }
+
+                &.wrong-answer {
+                    background-color: red;
+                }
+                
+
+                &:nth-child(1) {
+                    clip-path: polygon(1% 2%, 99% 4%, 99% 100%, 0 100%, 0 100%);
+                }
+
+                &:nth-child(2) {
+                    clip-path: polygon(0 0, 99% 4%, 99% 95%, 0 100%, 1% 100%);
+                }
+
+                &:nth-child(3) {
+                    clip-path: polygon(2% 2%, 99% 4%, 99% 95%, 0 100%, 1% 100%);
+                }
+
+                &:nth-child(4) {
+                    clip-path: polygon(1% 2%, 99% 4%, 99% 100%, 0 100%, 0 100%);
+                }
+                
+            }
+        }
+    }
+}
+
+@keyframes greenBlinkingBg {
+    0% {
+        background-color: #75b5ff;
+    }
+
+    50% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: #75b5ff;
+    }    
+}
