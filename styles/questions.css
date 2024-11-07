@@ -62,12 +62,13 @@
             clip-path: polygon(0 0, 99% 2%, 100% 100%, 100% 100%, 2% 99%);
 
             h1 {
-                font-size: 56px;
+                font-size: 48px;
                 background: #6A48FF;
                 height: 75%;
                 display: grid;
                 place-items: center;
-                width: 90%;
+                width: 85%;
+                padding: 0 22px;
             }
         }
 
@@ -88,6 +89,7 @@
                 place-items: center;
                 font-size: 26px;
                 cursor: pointer;
+                padding: 0 16px;
                 color: white;
                 transition: background-color 0.1s ease;
 
@@ -97,17 +99,17 @@
                 }
 
                 &.correct-answer {
-                    background-color: green;
+                    background-color: rgb(73, 223, 73);
                 }
 
                 &.correct-answer-blinking {
                     /* transition-delay: 0.5s; */
-                    background-color: green;
+                    background-color: rgb(73, 223, 73);
                     animation: greenBlinkingBg 0.5s ease infinite;
                 }
 
                 &.wrong-answer {
-                    background-color: red;
+                    background-color: rgb(235, 69, 69);
                 }
                 
 
@@ -138,7 +140,7 @@
     }
 
     50% {
-        background-color: green;
+        background-color: rgb(73, 223, 73);
     }
 
     100% {
