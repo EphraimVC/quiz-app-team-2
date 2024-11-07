@@ -24,12 +24,20 @@
             }
         }
 
+        #score{
+            color: #FFE100;
+        }
         .hiscore-container {
             font-size: 28px;
             color: white;
 
             .new-record {
+                display: none;
                 color: var(--yellow-accent);
+            }
+
+            .new-record.show {
+                display: block;
             }
         }
 
