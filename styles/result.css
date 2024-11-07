@@ -1,0 +1,12 @@
+.container {
+    border: 1px dashed black;
+    
+    &.red-border {
+        border: 1px dashed red;
+    }
+
+    &:hover {
+        border-width: 2px;
+    }
+    
+}

@@ -5,6 +5,7 @@
     color: white;
     align-items: center;
     justify-content: center;
+    /* backdrop-filter: blur(16px); */
 
     .questions-wrapper {
         display: flex;
@@ -14,7 +15,7 @@
         gap: 32px;
 
         .questions-header {
-            height: 100px;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -45,6 +46,8 @@
             
             .question-index-container {
                 font-size: 28px;
+                position: relative;
+                top: 18px;
             }
             
             .time-container {
@@ -70,7 +73,7 @@
         }
 
         .answer-container {
-            height: fit-content;
+            height: auto;
             background-color: rgba(255, 255, 255, 0.25);
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -81,13 +84,65 @@
 
 
             .answer {
-                background-color: white;
+                background-color: #75b5ff;
                 display: grid;
                 place-items: center;
                 font-size: 26px;
                 cursor: pointer;
-                color: black;
+                color: white;
+                transition: background-color 0.1s ease;
+
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+
+                &.correct-answer {
+                    background-color: green;
+                }
+
+                &.correct-answer-blinking {
+                    /* transition-delay: 0.5s; */
+                    background-color: green;
+                    animation: greenBlinkingBg 0.5s ease infinite;
+                }
+
+                &.wrong-answer {
+                    background-color: red;
+                }
+                
+
+                &:nth-child(1) {
+                    clip-path: polygon(1% 2%, 99% 4%, 99% 100%, 0 100%, 0 100%);
+                }
+
+                &:nth-child(2) {
+                    clip-path: polygon(0 0, 99% 4%, 99% 95%, 0 100%, 1% 100%);
+                }
+
+                &:nth-child(3) {
+                    clip-path: polygon(2% 2%, 99% 4%, 99% 95%, 0 100%, 1% 100%);
+                }
+
+                &:nth-child(4) {
+                    clip-path: polygon(1% 2%, 99% 4%, 99% 100%, 0 100%, 0 100%);
+                }
+                
             }
         }
     }
+}
+
+@keyframes greenBlinkingBg {
+    0% {
+        background-color: #75b5ff;
+    }
+
+    50% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: #75b5ff;
+    }    
 }

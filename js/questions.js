@@ -4,9 +4,15 @@ let questions = {};
 
 let scoreElement = document.getElementById('score');
 let questionElement = document.getElementById('question')
-let questionNumberElement = document.getElementById('question-number')
-let answerContainer = document.getElementById('answer-container')
+let questionNumberElement = document.getElementById('questionNumberElement')
+let answerContainer = document.getElementById('answerContainer')
 let timeElement = document.getElementById('time')
+let currentQuestionTitleElement = document.getElementById('currentQuestionTitleElement')
+
+//audio
+let soundSuccess = document.getElementById('soundSuccess')
+let soundWrong = document.getElementById('soundWrong')
+
 
 //fetch quiz and put response in questions variable
 async function fetchQuizData() {
@@ -18,42 +24,79 @@ async function fetchQuizData() {
 }
 
 
-function answerQuestion(answer) {
+function answerQuestion(e, answer) {
     //check if chosen answer is correct
+    let answerElements = document.querySelectorAll('.answer');
+
+
+    stopTimer();
     
-    if (answer === questions[currentQuestion].answer) {
-        console.log('CORRECT')
-        
-        //increment current question
-        currentQuestion += 1
-        
-        //increment score
-        score += 1;
-    
-        //rerender elements
-        renderFunction();
-        
-        //reset timer
-        stopTimer();
-        
-        //restart new timer
-        questionTimer();
-    } else {
-        console.log('WRONG')
-
-        //increment current question
-        currentQuestion += 1;
-
-        //dont increment score, as it was wrong
-        //rerender elements
-        renderFunction();
-
-        //reset timer
-        stopTimer();
-        
-        //restart new timer
-        questionTimer();
+    if (answer === 'TIME RAN OUT') {
+        answerElements.forEach((elem) => {
+            if(elem.textContent === questions[currentQuestion].answer) {
+                elem.classList.add('correct-answer-blinking')
+            }
+        })
     }
+    else if (answer === questions[currentQuestion].answer) {
+        e.srcElement.classList.add('correct-answer')
+        //needs a check if sound is muted
+        soundSuccess.play();
+    } else {
+        e.srcElement.classList.add('wrong-answer')
+        soundWrong.play();
+
+        answerElements.forEach((elem) => {
+            if(elem.textContent === questions[currentQuestion].answer) {
+                elem.classList.add('correct-answer-blinking')
+            }
+        })
+    }
+
+    setTimeout(() => {
+        if (answer === questions[currentQuestion].answer) {
+            //increment score
+            score += 1;
+            
+            //increment current question
+            if (currentQuestion === 9) {
+                localStorage.setItem('finalScore', score)
+                window.location.href = '/pages/result.html'
+            } else {
+                currentQuestion += 1
+            }
+            
+            //rerender elements
+            renderFunction();
+            
+            //reset timer
+            resetTimer();
+            
+            //restart new timer
+            questionTimer();
+        } else {
+            //increment current question
+            if (currentQuestion === 9) {
+                localStorage.setItem('finalScore', score)
+                window.location.href = '/pages/result.html'
+            } else {
+                currentQuestion += 1
+            }
+    
+            
+            //dont increment score, as it was wrong
+            //rerender elements
+            renderFunction();
+            
+            //reset the timer
+            resetTimer();
+            
+            //restart new timer
+            questionTimer();
+        }
+    }, 2000)
+    
+    
     
 }
 
@@ -62,31 +105,34 @@ var timerInterval = undefined;
 
 function questionTimer() {
     //set variables in seconds
-    let time = 60;
+    let time = 30;
 
     //create a interval that decrements time every 1000ms
     timerInterval = setInterval(() => {
         //if time isn't 0 decrement
         if (time != 0) {
             time -= 1;
-            timeElement.textContent = '00:' + time;
+            timeElement.textContent = time + 's';
         }
 
         //if time is 0, the timer has run out -- kill timer, declare time is out, go to next question
         if (time === 0) {
             clearInterval(timerInterval)
-            console.log('TIME IS OUT')
-            answerQuestion('time is out')
+            answerQuestion('', 'TIME RAN OUT')
         }
     }, 1000)
 }
 
-function stopTimer() {
+function resetTimer() {
     //reset timer text
-    timeElement.textContent = '01:00'
+    timeElement.textContent = '30s'
 
     //clear timer interval
     clearInterval(timerInterval)
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
 }
 
 async function renderFunction() {
@@ -100,23 +146,26 @@ async function renderFunction() {
     questionElement.textContent = questions[currentQuestion].question
 
     for (let i in questions[currentQuestion].options) {
-        const p = document.createElement('p')
+        const div = document.createElement('div')
 
-        p.textContent = questions[currentQuestion].options[i]
+        div.classList.add('answer')
+        div.textContent = questions[currentQuestion].options[i]
     
-        p.addEventListener('click', function(e) {
-            answerQuestion(questions[currentQuestion].options[i]);
+        div.addEventListener('click', function(e) {
+            answerQuestion(e, questions[currentQuestion].options[i]);
         })
     
-        answerContainer.appendChild(p)
+        answerContainer.appendChild(div)
     }
 
     //render score
-    scoreElement.textContent = 'score: ' +score;
-    questionNumberElement.textContent = 'question: ' + (currentQuestion + 1);
+    scoreElement.textContent = score;
+    questionNumberElement.textContent = 'Fråga ' + (currentQuestion + 1) + ' av 10';
 }
 
 
-//start game functions
+//init game function
 renderFunction();
-//questionTimer();
+
+//init timer function
+// questionTimer(); //uncomment me for release
