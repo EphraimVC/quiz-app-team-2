@@ -188,6 +188,8 @@ footer{
     left: 50%;
     top:50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: top 0.3s ease, opacity 0.3s ease, display 0.3s ease allow-discrete;
    
     h2{
         margin-bottom: 10px;
@@ -195,10 +197,22 @@ footer{
     p{
         margin-bottom: 15px;
     }
+
+    
 }
 /* show the popup by adding this clas to the current existing class in the popup element  */
 .rulesPopUp.showPopUp{
     display: block;
+    opacity: 1;
+    top: 50%;
+    
+}
+
+@starting-style {
+.rulesPopUp.showPopUp {
+    opacity: 0;
+    top: 60%;
+    }
 }
 /* blures the backgroud  */
 .mainBlur{
