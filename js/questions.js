@@ -56,7 +56,7 @@ function answerQuestion(e, answer) {
     setTimeout(() => {
         if (answer === questions[currentQuestion].answer) {
             //increment score
-            score += 1;
+            score += 10;
             
             //increment current question
             if (currentQuestion === 9) {
@@ -84,12 +84,16 @@ function answerQuestion(e, answer) {
             }
     
             
-            //dont increment score, as it was wrong
+            //decrement score because of wrong answer
+            score -= 5;
+
             //rerender elements
             renderFunction();
             
             //reset the timer
             resetTimer();
+
+            
             
             //restart new timer
             questionTimer();
