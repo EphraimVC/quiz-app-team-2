@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    
     text-align: center;
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
+    
+    
 }
-
 .container {
     display: flex;
     flex-direction: column;
@@ -41,7 +44,7 @@ body {
 }
 .category {
     width: 250px;
-    height: 250px;
+    flex: 1, 0;
     background-color: rgba(255, 255, 255, 0.25);
     
     display: flex;
@@ -53,10 +56,15 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s;
-     
+        
 }
 .category:hover {
     transform: scale(1.1);
+}
+
+.category img{
+    width: 80%;
+    margin: 20px;
 }
 
 .logo-sound{
