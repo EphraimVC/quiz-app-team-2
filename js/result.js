@@ -7,12 +7,14 @@ let player = document.querySelector(".player")
 
 let score = localStorage.getItem("finalScore");
 let hiscore = localStorage.getItem("highestScore");
-console.log(hiscore);
+
+console.log(score)
+console.log(hiscore)
 
 playAgainBtn.addEventListener("click", () => {
     localStorage.removeItem("finalScore")
     localStorage.removeItem("name")
-   window.location.href = "/index.html"
+    window.location.href = "/index.html"
 })
 
 player.innerText = localStorage.getItem("name")
@@ -27,16 +29,17 @@ if (score >= 10) {
     }));
 }
 
-if (hiscore === null) {
+if (hiscore == null) {
     localStorage.setItem("highestScore", score)
     recordElement.classList.add("show")
-}
-else if (score > hiscore) {
-     localStorage.setItem("highestScore", score)
-     recordElement.classList.add("show")
+    hiscoreElement.innerText = score
+    
+} else if (parseInt(score) > parseInt(hiscore)) {
+    localStorage.setItem("highestScore", score)
+    recordElement.classList.add("show")
+    hiscoreElement.innerText = score
 } else {
+    hiscoreElement.innerText = hiscore
 }
-hiscoreElement.innerText = hiscore
-console.log(hiscore);
 
 
