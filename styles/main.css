@@ -242,3 +242,19 @@ footer{
     float: right;
     margin-bottom: 20px;
 }
+
+#mute-button {
+    height: 50px;
+    width: 50px;
+    background: var(--yellow-accent);
+    font-size: 32px;
+    display: grid;
+    place-items: center;
+    clip-path: polygon(1% 1%, 100% 1%, 99% 98%, 0 100%);
+
+    
+    i {
+        position: relative;
+        top: 2px;
+    }
+}
