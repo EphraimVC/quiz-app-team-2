@@ -21,7 +21,7 @@ player.innerText = localStorage.getItem("name")
 scoreElement.innerText = score
 
    //beroende på score
-if (score >= 10) {
+if (parseInt(score) >= 50) {
     tsParticles.load("tsparticles", confetti({
         particleCount: 100,
         spread: 360,
@@ -29,7 +29,7 @@ if (score >= 10) {
     }));
 }
 
-if (hiscore == null) {
+if (hiscore === null) {
     localStorage.setItem("highestScore", score)
     recordElement.classList.add("show")
     hiscoreElement.innerText = score
@@ -41,5 +41,3 @@ if (hiscore == null) {
 } else {
     hiscoreElement.innerText = hiscore
 }
-
-
