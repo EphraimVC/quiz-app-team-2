@@ -26,6 +26,7 @@ if (lsHiScore === null) {
 else { 
     showHiScore.innerText = lsHiScore
 }
+console.log(lsHiScore);
 // ------------------popup-------------------------------- 
 const togglePopUp = () => {
     rulesWindow.classList.toggle("showPopUp");
