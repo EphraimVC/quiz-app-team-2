@@ -1,9 +1,11 @@
 .main-questions {
     display: flex;
     color: white;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     overflow-x: hidden;
+    height: auto;
+    padding: 32px;
 
     @media (max-width: 1100px) {
         padding: 0 32px;
@@ -84,9 +86,8 @@
             }
 
             .question-inner-container {
-                height: calC(100% - 128px);
+                /* height: calC(100% - 128px); */
                 width: calc(100% - 128px);
-                background: #6A48FF;
                 padding: 16px;
                 display: grid;
                 place-items: center;
@@ -98,6 +99,7 @@
                 
                 h1 {
                     font-size: 48px;
+                    text-align: center;
 
                     @media(max-width: 768px) {
                         font-size: 32px;
