@@ -92,58 +92,63 @@ h1,h2,h3,h4,h5,h6,p {
     }
 }
 
-.inputContainer{
+.inputContainer {
 display: flex;
 flex-direction: column;
 margin-top: 3rem;
 }
-.inputHolder{
+.inputHolder {
+    /* display: flex; */
+    background-color: var(--input-);
+    /* padding: 8px; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
     display: flex;
-    background-color: var(--input-);
-    padding: 8px;
-    width:clamp(18rem, 50vw, 20rem);
+    gap: 8px;
+    width: clamp(18rem, 50vw, 20rem);
+    clip-path: polygon(0 0, 99% 2%, 100% 100%, 100% 100%, 1% 99%);
+    
 
-   input{
-    border: none;
-    outline: none;
-    background-color: var(--input-);
-    color:#440496;
-    font-size: 0.9rem;
-    font-weight: 700;
-    width: 20rem;
-   }
-    
-    .btnWrapper{
-        position: relative;
-        display: inline-block;
+    input {
+        border: none;
+        outline: none;
+        font-size: 1.25rem;
+        font-weight: 700;
+        background: none;
+        height: 3.75rem;
+        padding-left: 1rem;
+        font-family: 'Passion One';
+        
+        
+
+        &::placeholder {
+            opacity: 0.5;
+        }
+    }   
+
+    button {
+        width: 7rem;
+        /* height: 100%; */
+        padding: 0.75rem 0;
         cursor: pointer;
-        right: 5px;
-    }
-    .btnText{
-        position: absolute;
-        color: white; 
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: clamp(1.2rem, 2vw, 1.6rem);
-        font-weight: 400;
-    }
-    .btnText:hover{
-        color: #FFE100;
-    }
-    
-    .btnBackground{
-        min-width: 5rem;
-        width: 6.5rem;
-        max-width: 7rem;
-        height: auto;
-        display: block;
+        border: none;
+        background: var(--yellow-accent);
+        font-family: 'Passion One';
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+        clip-path: polygon(0 0, 100% 1%, 98% 100%, 0 100%);
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
     }
    
   
 }
-.settingsContainer{
-    .highScore{
+.settingsContainer {
+    .highScore {
         font-size: clamp(1.3rem, 1.7vw, 2rem);
         font-weight: 400;
         color: var(--overall-);
