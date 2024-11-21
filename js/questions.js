@@ -172,4 +172,4 @@ async function renderFunction() {
 renderFunction();
 
 //init timer function
-// questionTimer(); //uncomment me for release
+questionTimer(); //uncomment me for release
