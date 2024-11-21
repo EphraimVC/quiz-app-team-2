@@ -1,4 +1,5 @@
 const playAgainBtn = document.querySelector("#playAgainBtn");
+let resultText = document.querySelector("#resultText");
 
 let scoreElement = document.querySelector("#score");
 let hiscoreElement = document.querySelector("#hiscore");
@@ -20,7 +21,19 @@ playAgainBtn.addEventListener("click", () => {
 player.innerText = localStorage.getItem("name")
 scoreElement.innerText = score
 
-   //beroende på score
+//beroende på score
+   
+if (parseInt(score) < 30) {
+    resultText.innerText = "Säääämst !!!"
+}
+else if (parseInt(score) < 70) {
+    resultText.innerText = "Snyyyggt Jobbat!!"
+}
+else { 
+    resultText.innerText = "Du är en expert!!"
+}
+
+
 if (parseInt(score) >= 50) {
     tsParticles.load("tsparticles", confetti({
         particleCount: 100,
