@@ -46,9 +46,9 @@
 ![nördkampen-logo](https://github.com/user-attachments/assets/f451886f-903c-427f-89c8-9791aa1e8aa9)
 ***
 Gruppmedlemmar:
-Emil Avara
-Ephraim Valladares
-Fares Elloumi
+- Emil Avara
+- Ephraim Valladares
+- Fares Elloumi
 
 Quiz appens funktionalitet:
 quiz appen med första sidan som visar olika val som t.ex. för att slå på eller stänga av ljud, en knapp som visas spelets regler samt en input fält där spelaren skriver in sitt namn och trycker på knappen "nästa", som tar spelaren till nästa sida där man väljer vilken kategori man vill spela, kategorierna är "html", "css" och "js".
