@@ -12,6 +12,10 @@
     --yellow-accent: #FFE100;
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 svg {
     position: fixed;
     top: 0;

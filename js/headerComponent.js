@@ -21,6 +21,7 @@ class nkHeader extends HTMLElement {
 window.customElements.define('nk-header', nkHeader);
 
 document.addEventListener('DOMContentLoaded', () => {
+    
     const logoElement = document.querySelector('#header-logo-img');
     
     const muteButton = document.getElementById('mute-button');
@@ -28,16 +29,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const volumeIcon = document.getElementById('volume-icon');
 
-    muteButton.addEventListener('click', () => {
+    setVolumeIcon();
 
+
+    if (localStorage.getItem('muted') === null) {
+        localStorage.setItem('muted', "false")
+    }
+    
+    if (localStorage.getItem('muted') === "true") {
+
+    }
+    
+     
+    muteButton.addEventListener('click', () => {
+        if (localStorage.getItem('muted') === "false") {
+            localStorage.setItem('muted', "true")
+            setVolumeIcon();
+
+        } else {
+            localStorage.setItem('muted', 'false')
+            setVolumeIcon();
+
+        }
         //local storage för muted
     })
 
+    function setVolumeIcon() {
+        if (localStorage.getItem('muted') === "true") {
+            volumeIcon.classList.remove('bi-volume-up-fill')
+            volumeIcon.classList.add('bi-volume-mute-fill')
+            audioElements.forEach((audio) => {
+                audio.muted = true;
+            })
+        } else {
+            volumeIcon.classList.remove('bi-volume-mute-fill')
+            volumeIcon.classList.add('bi-volume-up-fill')
+
+            audioElements.forEach((audio) => {
+                audio.muted = false;
+            })
+        }
+    }
+
+
+
     //if we are on index.html
-    if (window.location.pathname === '/') {
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
         logoElement.style.visibility = 'hidden';
     }
 
-    
-
+    console.log(window.location.pathname)
 })
+
+
+/* 
+    global variable
+    see if key exists i ls
+        gör den inte det, sätt muted till false
+        ändra inte variabeln
+
+    om key exists i ls
+        ändra variabeln
+        
+        
+    on click, sätt global variabel, och ls
+
+
+
+*/
