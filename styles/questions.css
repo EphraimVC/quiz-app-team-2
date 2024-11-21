@@ -86,9 +86,8 @@
             }
 
             .question-inner-container {
-                height: calC(100% - 128px);
+                /* height: calC(100% - 128px); */
                 width: calc(100% - 128px);
-                background: #6A48FF;
                 padding: 16px;
                 display: grid;
                 place-items: center;
@@ -100,6 +99,7 @@
                 
                 h1 {
                     font-size: 48px;
+                    text-align: center;
 
                     @media(max-width: 768px) {
                         font-size: 32px;
