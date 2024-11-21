@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 
 body {
     font-family: "Passion One";
-    text-align: center;
+    /* text-align: center; */
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     
     
 }
@@ -45,6 +44,7 @@ body {
     color: white;
     margin: 0;
     font-weight:700;
+    text-align: center;
     opacity: 0.5;
 }
 .categories {
@@ -83,6 +83,8 @@ body {
     display: flex;
     justify-content:space-between;
     padding: 10px 20px; 
+    view-transition-name: header;
+
 }
 .logo {
     display: flex;

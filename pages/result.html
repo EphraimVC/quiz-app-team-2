@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
     <title>Quiz app - results</title>
+    <script src="../js/headerComponent.js"></script>
+
 </head>
 <body>
     <!-- ---------------background------------------------------------------ -->
@@ -43,11 +45,11 @@
         <path fill="#FFE100" class="in-bottom" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z"/>
     </svg>
     <!-- ---------------background------------------------------------------ -->
-   
+    <nk-header></nk-header>
     <main id="test" class="main-result">
         <div class="result-container">
-            <h1 id="resultText">Snyggt jobbat!</h1>
-            <h1 id="resultText" class="player"></h1>
+            <h1 id="resultText">Snyggt jobbat, <span class="player"></span>!</h1>
+            <!-- <h1 id="resultText" class="player"></h1> -->
             <div class="score-container">
                 <h1><span id="score"></span>/100</h1>
             </div>
@@ -59,6 +61,8 @@
         </div>
     </main>
     <div id="tsparticles"></div>
+    <audio id="soundSuccess" src="../assets/sound/success.mp3"></audio>
+    <audio id="soundWrong" src="../assets/sound/wrong.mp3"></audio>
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script src="../js/result.js"></script>
 </body>

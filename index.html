@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="quiz game with tricky questions for web developers">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
     <title>Quiz App Team 2</title>
+    <script src="js/headerComponent.js"></script>
 </head>
 
 <body>
+    <nk-header></nk-header>
         <div class="rulesPopUp" id="popContainer">
             <span class="closePopUp" role="button"> X </span>
             <h2>Regler</h2>
@@ -58,7 +58,6 @@
             <path fill="#440496" class="out-bottom" d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z"/>
             <path fill="#FFE100" class="in-bottom" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z"/>
         </svg>
-        <div class="speaker"></div>
         <div class="indexWrapper">
             <section class="indexHeading">
                 <img class="quizIcon" src="/assets/nerdis.svg" alt="icon">
@@ -83,6 +82,8 @@
         </div>
     </main>
     <footer> &copy; Team 2 2024 </footer>
+    <audio id="soundSuccess" src="../assets/sound/success.mp3"></audio>
+    <audio id="soundWrong" src="../assets/sound/wrong.mp3"></audio>
     <script src="/js/main.js"></script>
 </body>
 

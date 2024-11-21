@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
     <title>Quiz app - categories</title>
+    <script src="../js/headerComponent.js"></script>
+
 </head>
 <body>
 <!-- ---------------background------------------------------------------ -->
@@ -43,14 +45,7 @@
     <path fill="#FFE100" class="in-bottom" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z"/>
 </svg>
 <!-- ---------------background------------------------------------------ -->
-    <header class="logo-sound">
-        <div class="logo">
-            <img  src="../img/logo.svg" alt="Logo with a smiling face wearing sunglasses">
-        </div>
-        <div class="sound-icon">
-            <img  src="../img/lsicon_volume-filled.svg" alt="Sound icon">
-        </div>
-    </header>
+    <nk-header></nk-header>
     <main class="container">
         <div class="header">
             <h1>Välj kategori</h1>
@@ -72,7 +67,8 @@
         </div>
     </main>
     <footer> © Team 2 2024</footer>
-      
+    <audio id="soundSuccess" src="../assets/sound/success.mp3"></audio>
+    <audio id="soundWrong" src="../assets/sound/wrong.mp3"></audio>
     <script src="/js/categories.js"></script>
 </body>
 </html>
