@@ -1,6 +1,6 @@
 let currentQuestion = 0
 let score = 0
-let questions = {};
+let questions = [];
 
 let scoreElement = document.getElementById('score');
 let questionElement = document.getElementById('question')
@@ -16,11 +16,19 @@ let soundWrong = document.getElementById('soundWrong')
 
 //fetch quiz and put response in questions variable
 async function fetchQuizData() {
-    const response = await fetch('../data/quizData.json')
-    const data = await response.json();
-    let category = localStorage.getItem('Kategori')
-    //populate questions variable with data
-    questions = data[category];
+    //fetch if questions variable is empty
+    if (questions.length === 0) {
+        const response = await fetch('../data/quizData.json')
+        
+        //parse response and store in temp variable
+        const data = await response.json();
+        
+        //get category from local storage
+        let category = localStorage.getItem('Kategori')
+        
+        //populate questions variable with data
+        questions = data[category];
+    }
 }
 
 
