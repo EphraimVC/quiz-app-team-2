@@ -154,9 +154,10 @@ async function renderFunction() {
     //clear answerContainer from content
     answerContainer.innerHTML = ''
     
-    //render answers
+    //render question
     questionElement.textContent = questions[currentQuestion].question
 
+    //render answers
     for (let i in questions[currentQuestion].options) {
         const div = document.createElement('div')
 
